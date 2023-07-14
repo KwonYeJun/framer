@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+
 import './App.css';
 
 function App() {
+  const [nickName,setNickName] = useState('주늬요');
+
+  const togle = () => {
+    setNickName('행복한 원숭이')
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={togle}> {nickName}</button>
     </div>
   );
 }
