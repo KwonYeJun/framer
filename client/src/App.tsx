@@ -45,8 +45,14 @@ const App: React.FC = () => {
     revalidateOnFocus: true,
   });
 
-  if (error) return <div>Failed to load data</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error){
+    console.log(error,'error')
+    return <div>Failed to load data</div>;
+  } 
+  if (!data){
+    console.log(data,'data')
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
